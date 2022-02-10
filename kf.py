@@ -11,8 +11,8 @@ class KF:
         
         self._accel_variance = accel_variance   #this is the system noise, we assumes that the acceletion mean is 0
 
-        # covariance of state 
-        self._P = np.eye(2)   #[[1,0],[1,0]] initial 
+        # covariance of state error
+        self._P = np.eye(2)   #[[1,0],[0,1]] initial 
 
     def predict(self, dt: float) -> None:
         
